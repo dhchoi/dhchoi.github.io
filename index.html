@@ -1,1 +1,128 @@
-hello world
+<!--
+TODO:
+- google analytics
+- facebook metadata
+- SEO
+- social links (linkedin, etc.)
+- projects section update (wheelector, etc.)
+- blog section update
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dhchoi</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1, width=device-width">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Google Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Style Sheets --> 
+	<link href="//yui.yahooapis.com/pure/0.3.0/pure-min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div id="layout" class="pure-g-r" >
+		<div id="sidebar" class="pure-u class">
+			<div id="badge"></div>
+			<nav id="nav">
+				<ul>
+					<li><a href="#home" class="scroll link-selected">home</a></li>
+					<li><a href="#projects" class="scroll">projects</a></li>
+					<li><a href="#blog" class="scroll">blog</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="pure-u-1">
+			<ul id="sidebar-toggle">
+				<i class="icon-angle-right icon-3x"></i>
+				<i class="icon-angle-left icon-3x"></i>
+			</ul>
+			<div id="content">
+				<div id="home" class="page" style="display: block;">
+					<h1>Andy Choi</h1>
+					<article>
+						<p>
+							Undergraduate student at <a href="http://www.cmu.edu" target="_blank">Carnegie Mellon Univeristy</a>, majoring in electrical and computer engineering, minoring in computer science, minoring in business administration, and graduating in Spring 2015.
+						</p>
+						<p>
+							Worked at <a href="http://www.jumptrading.com" target="_blank">Jump Trading</a> as a software engineer intern to dive into high frequency trading, worked at <a href="http://www.danal.co.kr/eng" target="_blank">Danal</a> as a software engineer to conquer mobile and micro payments, and currently working at <a href="http://i.vi-nyl.com/‎" target="_blank">Vinyl-I</a> to dig the secrets of interactive design and user experience.
+						</p>
+						<p>
+							Currently interested in artificial intelligence, machine learning, web technology, and human factors.
+						</p>
+					</article>
+				</div>
+				<div id="projects" class="page" style="display: none;">
+					<h1>Projects</h1>
+					<article>
+						<h2>IPN: International Payment Network</h2>
+						<p>
+							An international <a href="http://ipn.danal.co.kr/ipn2/english/page/main.html" target="_blank">mobile payment service</a> used by <a href="http://www.samsungapps.com" target="_blank">Samsung App Store</a> for more than 18 countries.
+						</p>
+						<p>
+							<img src="img/danal-ipn-small.jpg" alt="International Payment Network">
+						</p>
+					</article>
+					<article>
+						<h2>Interactive Media Wall</h2>
+						<p>
+							Media wall using Microsoft Kinect for client <a href="http://www.poom.co.kr/main/" target="_blank">Artbox Poom</a> at <a href="http://www.livingdesignfair.co.kr/" target="_blank">Seoul Living Design Fair 2013</a>.
+						</p>
+						<p>
+							<div class="video-container">
+								<iframe width="960" height="720" src="//www.youtube.com/embed/ROZ02rRTYj8?rel=0" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</p>
+					</article>
+					<article>
+						<h2>Microsoft Surface Launch Campaign</h2>
+						<p>
+							A pop-up store built in Seoul to promote and advertise the launch of <a href="http://www.microsoft.com/surface/en-us" target="_blank">Microsoft Surface</a> in Korea.
+						</p>
+						<p>
+							<div class="video-container">
+								<iframe width="960" height="720" src="//www.youtube.com/embed/ryb6S88qI20?rel=0" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</p>
+					</article>
+					<article>
+						<h2>Hologram Pop-up Book</h2>
+						<p>
+							Gesture recognizing hologram pop-up book developed along with <a href="http://www.etri.re.kr/eng/" target="_blank">ETRI</a> and <a href="http://www.hanyang.ac.kr/english/" target="_blank">Hanyang University</a>.
+						</p>
+						<p>
+							<div class="video-container">
+								<iframe width="960" height="720" src="//www.youtube.com/embed/12a35GoX1go?rel=0" frameborder="0" allowfullscreen></iframe>
+							</div>
+						</p>
+					</article>
+				</div>
+				<div id="blog" class="page" style="display: none;">
+					<h1>Blog</h1>
+					<article>
+						<h2>AngelHack Seoul</h2>
+						<p>
+						Nullam malesuada orci sit amet convallis convallis. Vivamus euismod commodo sagittis. Sed elementum nibh eu fermentum volutpat. Aenean ac condimentum ligula, quis vehicula ante. Proin commodo nibh at mollis blandit. Nulla non malesuada nulla. Nam dapibus, ipsum nec porta ornare, diam tellus lacinia felis, id lacinia leo turpis quis est. Curabitur in adipiscing justo. Nullam vel nibh tortor. Sed sed imperdiet erat, id consectetur leo. Nam sagittis, justo at tempus adipiscing, dolor mauris gravida sapien, eget mattis ligula tellus sed sapien. Quisque gravida ac neque et pellentesque. Pellentesque fringilla arcu eget sapien blandit ultricies. Duis tempus, nunc sit amet fermentum vestibulum, libero nisi aliquam tortor, nec ornare diam tortor et tortor. Ut quis molestie libero.
+
+						Nam a malesuada nibh. Cras risus lorem, rutrum et cursus et, mollis non odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam aliquam sapien vitae purus adipiscing rhoncus. In tincidunt ut sem sed mattis. Vestibulum pulvinar nibh eget leo posuere fringilla. Sed sit amet erat a nisi pretium ullamcorper aliquam ac lacus. Pellentesque a lectus a neque elementum pulvinar tincidunt ac felis. Fusce augue odio, commodo sed malesuada non, auctor quis ligula.
+					</p>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
