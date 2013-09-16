@@ -16,25 +16,9 @@ $(document).ready(function() {
 			$(open);
 		}
 	});
-	$contentContainer.click(function(){
+	$contentContainer.click(function() {
 		if ($contentContainer.hasClass("open")) {
 			$(close);
 		}
-	});
-
-	/* page transitions */
-	var $links = $("#sidebar a");
-	var $pages = $("#content > .page");
-	$(".scroll").click(function (event) {
-		event.preventDefault();
-
-		$($pages).not(this.hash).hide();
-		$(this.hash).fadeIn();
-
-		// link selected indicators
-		$($links).not(this).removeClass("link-selected"); /* TODO: try using siblings */
-		$(this).addClass("link-selected");
-
-		$(close);
 	});
 });

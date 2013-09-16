@@ -1,0 +1,4 @@
+name: dhchoi
+markdown: redcarpet
+pygments: true
+permalink: /blog/:title
