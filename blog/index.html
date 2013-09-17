@@ -2,6 +2,7 @@
 layout: default
 title: Blog
 isBlog: true
+excerpt: "A place where my thoughts belong to."
 ---
 
 <div id="blog" class="page">
@@ -9,7 +10,16 @@ isBlog: true
 	<article>
 		<ul class="icons-ul">
 			{% for post in site.posts %}
-			<li><i class="icon-li icon-circle-blank"></i><span>{{ post.date | date_to_string }}</span> <i class="icon-double-angle-right"></i> <a href="{{ post.url }}">{{ post.title }}</a></li>
+			<li>
+				<i class="icon-li icon-circle-blank"></i>
+				<div class="post-meta-data">
+					<span>{{ post.date | date_to_string }}</span>
+					<i class="icon-double-angle-right"></i>
+				</div>
+				<ul class="post-meta-data">
+					<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+					<li class="read-time"><span>read in {{ post.content | reading_time }}</span></li></li>
+				</ul>
 			{% endfor %}
 		</ul>
 	</article>

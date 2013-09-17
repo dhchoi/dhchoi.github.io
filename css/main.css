@@ -265,11 +265,27 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 }
+.post-meta-data {
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+	list-style: none;
+}
+.icons-ul > li {
+	margin: 1em 0;
+}
+.date,
+.read-time {
+	color: #626262;
+}
 .date {
 	margin-left: 1em;
-	font-size: 0.5em;
-	color: #626262;
+	font-size: .5em;
 	vertical-align: middle;
+}
+.read-time {
+	font-size: .6em;
+	vertical-align: bottom;
 }
 .icon-double-angle-right {
 	margin: 0 .3em;

@@ -1,4 +1,4 @@
-name: dhchoi
+name: dhchoi.com
 markdown: redcarpet
 pygments: true
 permalink: /blog/:title

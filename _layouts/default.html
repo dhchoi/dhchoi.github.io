@@ -3,6 +3,7 @@ TODO:
 - SEO
 - cross browsing check
 - get domain mail?
+- get content wrapper height 100%
 -->
 <!DOCTYPE html>
 <html>
@@ -14,10 +15,11 @@ TODO:
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- facebook og meta tags -->
-  <meta property="og:title" content="{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="http://dhchoi.com/img/favicon-base.png">
-  <meta property="og:site_name" content="dhchoi.com">
+  <meta property="og:site_name" content="{{ site.name }}">
+  {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html }}">{% endif %}
   <!-- favicon -->
   <link href="/img/favicon.png" type="image/png" rel="icon">
   <!-- google fonts -->
