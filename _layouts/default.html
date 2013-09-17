@@ -14,11 +14,10 @@ TODO:
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- facebook og meta tags -->
-  <meta property="og:title" content="dhchoi.com">
+  <meta property="og:title" content="{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://dhchoi.com">
   <meta property="og:image" content="http://dhchoi.com/img/favicon-base.png">
-  <meta property="og:description" content="Online space of Andy (Dong Hyun) Choi">
+  <meta property="og:site_name" content="dhchoi.com">
   <!-- favicon -->
   <link href="/img/favicon.png" type="image/png" rel="icon">
   <!-- google fonts -->
