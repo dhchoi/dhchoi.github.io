@@ -1,13 +1,11 @@
 <!--
 TODO:
-- google analytics
 - facebook metadata
 - SEO
 - social links (email, linkedin, etc.)
-- projects section update (wheelector, etc.)
-- blog section update
 - cross browsing check
 - add disqus
+- favicon
 -->
 
 <!DOCTYPE html>
@@ -19,7 +17,6 @@ TODO:
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
   <!-- Google Fonts -->
   <link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
   <!-- CSS Bootstraps --> 
@@ -29,10 +26,17 @@ TODO:
   <link href="/css/main.css" rel="stylesheet">
   <!-- syntax highlighting CSS -->
   <link href="/css/syntax.css" rel="stylesheet">
-
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
   <![endif]-->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-44084704-1', 'dhchoi.com');
+  ga('send', 'pageview');
+  </script>
 </head>
 <body>
   <div id="layout" class="pure-g-r" >
