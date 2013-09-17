@@ -2,6 +2,7 @@
 layout: post
 title:  "Blog Opened"
 categories: life
+comments: true
 ---
 
 Blog opened at this date. Made with `<love />` using the followings:
@@ -14,3 +15,7 @@ Blog opened at this date. Made with `<love />` using the followings:
 - <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a>
 - <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
 - <a href="http://pages.github.com/" target="_blank">GitHub Pages</a>
+- <a href="http://disqus.com/" target="_blank">Disqus</a>
+- <a href="http://www.godaddy.com/" target="_blank">GoDaddy</a>
+- <a href="http://www.photoshop.com/" target="_blank">Adobe Photoshop</a>
+- <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a>

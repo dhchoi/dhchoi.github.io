@@ -29,6 +29,7 @@ body {
 	position: relative;
 }
 
+/* sidebar */
 #sidebar {
 	background: rgba(0, 0, 0, .6); /* should be same as #626262 */
 	position: fixed;
@@ -36,7 +37,8 @@ body {
 	bottom: 0;
 	width: 200px;
 	margin-left: -200px;
-	padding-top: 3em;
+	padding: 3em 20px 0 20px;
+	overflow: auto;
 	z-index: 10;
 }
 #badge {
@@ -44,38 +46,40 @@ body {
 	width: 150px;
 	height: 150px;
 	margin: auto;
-
-	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
+	-o-border-radius: 150px;
+	-webkit-border-radius: 150px;	
 	border-radius: 150px;
-
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-o-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 #nav {
 	font-size: 1.2em;
-	margin-top: 3em;
+	margin: 3em 0;
 }
-#nav ul {
+#sidebar ul {
+	padding: 0;
 	margin: auto;
-	padding: 0 20px;
-	list-style-type: none;
+	list-style: none;
 }
 #nav ul li {
 	margin: .8em 0;
 }
+#sidebar a {
+	display: block;
+	text-decoration: none;
+}
+#sidebar a:hover,
+#sidebar a:focus {
+	text-decoration: none;
+}
 #nav a {
 	color: #f3f3f3;
-	display: block;
-	letter-spacing: 2px;
-	text-decoration: none;
 	text-transform: uppercase;
+	letter-spacing: 2px;
 	border-bottom: 2px solid #f3f3f3;
-}
-#nav a:hover,
-#nav a:focus {
-	text-decoration: none;
 }
 #nav a:hover {
 	border-bottom: 2px solid #7EA7D8;
@@ -88,7 +92,40 @@ body {
 	margin-left: .5em;
 	text-decoration: inherit;
 }
+#social-buttons {
+	text-align: center;
+	margin-bottom: 3em;
+}
+#social-buttons li {
+	display: inline-block;
+	margin: 0 auto;
+}
+#social-buttons li:first-child {
+	float: left;
+}
+#social-buttons li:last-child {
+	float: right;
+}
+#social-buttons a {
+	width: 42px;
+	height: 42px;
+	color: #f3f3f3;
+	text-align: center;
+	border-bottom: 2px solid #f3f3f3;
+	-moz-transition: all .1s ease-in;
+	-o-transition: all .1s ease-in;
+	-webkit-transition: all .1s ease-in;
+	transition: all .1s ease-in;
+}
+#social-buttons a:hover {
+	border-color: #7EA7D8;
+}
+#social-buttons i {
+	vertical-align: middle;
+	line-height: 42px;
+}
 
+/* sidebar toggle */
 #sidebar-toggle {
 	background-color: rgba(0, 0, 0, .6);
 	color: #fff;
@@ -101,7 +138,6 @@ body {
 	padding: 0;
 	z-index: 9;
 	display: none;
-	
 	-moz-transition: left .2s ease-in;
 	-o-transition: left .2s ease-in;
 	-webkit-transition: left .2s ease-in;
@@ -131,6 +167,7 @@ body {
 	opacity: 1;
 }
 
+/* content container */
 #content {
 	background-color: white;
 	font-size: 1.2em;
@@ -139,10 +176,14 @@ body {
 	max-width: 1000px;
 }
 
+/* page */
 .page {
 	background-color: white;
 	position: relative; /* combine fixed? with min-height later when changing transition mode */
 	margin: 2em 0;
+}
+.page ul {
+	margin: 0;
 }
 .page h1 {
 	float: right;
@@ -150,7 +191,6 @@ body {
 	font-size: 3em;
 	margin: 0 0 1.5em 0;
 	text-transform: uppercase;
-
 	-moz-box-shadow: 0 12px 0 rgba(0, 0, 0, .1);
 	-o-box-shadow: 0 12px 0 rgba(0, 0, 0, .1);
 	-webkit-box-shadow: 0 12px 0 rgba(0, 0, 0, .1);
@@ -170,6 +210,9 @@ body {
 	padding: 0 .3em;
 	text-decoration: none;
 	position: relative;
+	-moz-transition: all .1s ease-in;
+	-o-transition: all .1s ease-in;
+	-webkit-transition: all .1s ease-in;
 	transition: all .1s ease-in;
 }
 .page a:hover {
@@ -228,6 +271,9 @@ img {
 	color: #626262;
 	vertical-align: middle;
 }
+.icon-double-angle-right {
+	margin: 0 .3em;
+}
 
 .video-container {
 	position: relative;
@@ -268,8 +314,9 @@ img {
 	#sidebar,
 	#content,
 	#sidebar-toggle {
-		-webkit-transform: translate3d(0,0,0);
 		-moz-transform: translate3d(0,0,0);
+		-o-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	}
 
@@ -277,12 +324,13 @@ img {
 	#sidebar.open,
 	#content.open,
 	#sidebar-toggle.open {
-		-webkit-animation: open .3s ease-in-out;
 		-moz-animation: open .3s ease-in-out;
+		-o-animation: open .3s ease-in-out;
+		-webkit-animation: open .3s ease-in-out;
 		animation: open .3s ease-in-out;
-
-		-webkit-transform: translate3d(200px,0,0);
 		-moz-transform: translate3d(200px,0,0);
+		-o-transform: translate3d(200px,0,0);
+		-webkit-transform: translate3d(200px,0,0);
 		transform: translate3d(200px,0,0);
 	}
 
@@ -290,43 +338,55 @@ img {
 	#sidebar.close,
 	#content.close,
 	#sidebar-toggle.close {
-		-webkit-animation: close .3s linear;
 		-moz-animation: close .3s linear;
+		-o-animation: close .3s linear;
+		-webkit-animation: close .3s linear;
 		animation: close .3s linear;
-
-		-webkit-transform: translate3d(0,0,0);
 		-moz-transform: translate3d(0,0,0);
+		-o-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
 	}
 	
-	@-webkit-keyframes open {
-		0%      {-webkit-transform: translate3d(0,0,0);}
-		100%  {-webkit-transform: translate3d(200px,0,0);}
-	}
 	@-moz-keyframes open {
-		0%      {-moz-transform: translate3d(0,0,0);}
+		0%    {-moz-transform: translate3d(0,0,0);}
 		100%  {-moz-transform: translate3d(200px,0,0);}
 	}
+	@-o-keyframes open {
+		0%    {-o-transform: translate3d(0,0,0);}
+		100%  {-o-transform: translate3d(200px,0,0);}
+	}
+	@-webkit-keyframes open {
+		0%    {-webkit-transform: translate3d(0,0,0);}
+		100%  {-webkit-transform: translate3d(200px,0,0);}
+	}
 	@keyframes open {
-		0%      {transform: translate3d(0,0,0);}
+		0%    {transform: translate3d(0,0,0);}
 		100%  {transform: translate3d(200px,0,0);}
 	}
 
-	@-webkit-keyframes close {
-		0%      {-webkit-transform: translate3d(200px,0,0);}
-		100%  {-webkit-transform: translate3d(0,0,0);}
-	}
 	@-moz-keyframes close {
-		0%       {-moz-transform: translate3d(200px,0,0);}
+		0%    {-moz-transform: translate3d(200px,0,0);}
 		100%  {-moz-transform: translate3d(0,0,0);}
 	}
+	@-o-keyframes close {
+		0%    {-o-transform: translate3d(200px,0,0);}
+		100%  {-o-transform: translate3d(0,0,0);}
+	}
+	@-webkit-keyframes close {
+		0%    {-webkit-transform: translate3d(200px,0,0);}
+		100%  {-webkit-transform: translate3d(0,0,0);}
+	}
 	@keyframes close {
-		0%       {transform: translate3d(200px,0,0);}
+		0%    {transform: translate3d(200px,0,0);}
 		100%  {transform: translate3d(0,0,0);}
 	}
 }
 
 @media (max-width: 480px) {
+	#nav {
+		margin: 2em 0;
+	}
 	#content {
 		padding: 0 1em;
 	}
