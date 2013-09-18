@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Double Bitwise Trick for JavaScript |  dhchoi.com</title>
+  <title> Literals vs. Constructors Performance |  dhchoi.com</title>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1, width=device-width">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="HandheldFriendly" content="True">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- facebook og meta tags -->
-  <meta property="og:title" content="Double Bitwise Trick for JavaScript | dhchoi.com">
+  <meta property="og:title" content="Literals vs. Constructors Performance | dhchoi.com">
   <meta property="og:type" content="website">
   <meta property="og:image" content="http://dhchoi.com/img/favicon-base.png">
   <meta property="og:site_name" content="dhchoi.com">
-  <meta property="og:description" content="We already know that the bitwise NOT (~) operator will convert the 32 bit integer and flip each bit.
+  <meta property="og:description" content="You&#39;ve probably already known that there are two main ways of initializing objects: the literal notation and the constructor notation. The two are definitely used for different types of cases. But when the object is used to simply store data, both seem to do the same job. In this case, which one should we prefer? And is there a reason to do so?
 ">
   <!-- favicon -->
   <link href="/img/favicon.png" type="image/png" rel="icon">
@@ -69,12 +69,19 @@
         <div id="blog" class="page">
 	<h1>Blog</h1>
 	<article>
-		<h2>Double Bitwise Trick for JavaScript<span class="date">[17 September 2013]</span></h2>
-		<p>We already know that the bitwise NOT (~) operator will convert the 32 bit integer and flip each bit.</p>
+		<h2>Literals vs. Constructors Performance<span class="date">[17 September 2013]</span></h2>
+		<p>You&#39;ve probably already known that there are two main ways of initializing objects: the literal notation and the constructor notation. The two are definitely used for different types of cases. But when the object is used to simply store data, both seem to do the same job. In this case, which one should we prefer? And is there a reason to do so?</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="mi">00000000000000000000000000001001</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">flippedNum</span> <span class="o">=</span> <span class="o">~</span><span class="nx">num</span><span class="p">;</span> <span class="c1">// 11111111111111111111111111110110</span>
+<div class="highlight"><pre><code class="javascript"><span class="c1">// literal notation</span>
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+
+<span class="c1">// constructor notation</span>
+<span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
 </code></pre></div>
+
+<p>It turns out that the constructor notation is much more slower when considering performance issues. If you don&#39;t need to make any instances of the object later on, using the literal notation will save you much more time. You can check the performance differences that I made using jsPerf <a href="http://jsperf.com/literals-vs-constructors-performance">here</a>.</p>
 
 	</article>
 	
