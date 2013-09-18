@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Literals vs. Constructors Performance"
+title:  "Literals vs. Constructors Performance in JavaScript"
 categories: javascript
 comments: true
 ---
