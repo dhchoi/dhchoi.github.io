@@ -113,6 +113,7 @@ body {
 #social-buttons a {
 	width: 42px;
 	height: 42px;
+	letter-spacing: 0;
 	text-align: center;
 }
 #social-buttons i {
@@ -174,7 +175,7 @@ body {
 /* page */
 .page {
 	background-color: white;
-	position: relative; /* combine fixed? with min-height later when changing transition mode */
+	position: relative; /* combine fixed position with min-height when changing transition mode later */
 	margin: 2em 0;
 }
 .page ul {
