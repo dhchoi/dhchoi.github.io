@@ -1,0 +1,122 @@
+<!--
+TODO:
+- SEO
+- cross browsing check
+- get domain mail?
+- get content wrapper height 100%
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Blog |  dhchoi.com</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- facebook og meta tags -->
+  <meta property="og:title" content="Blog | dhchoi.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://dhchoi.com/img/favicon-base.png">
+  <meta property="og:site_name" content="dhchoi.com">
+  <meta property="og:description" content="A place where my thoughts belong to.">
+  <!-- favicon -->
+  <link href="/img/favicon.png" type="image/png" rel="icon">
+  <!-- google fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <!-- css bootstraps --> 
+  <link href="//yui.yahooapis.com/pure/0.3.0/pure-min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!-- custom css -->
+  <link href="/css/main.css" rel="stylesheet">
+  <!-- code syntax highlighting css -->
+  <link href="/css/syntax.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  <script>
+  /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-44084704-1', 'dhchoi.com');
+  ga('send', 'pageview');*/
+  </script>
+</head>
+<body>
+  <div id="layout" class="pure-g-r" >
+    <div id="sidebar" class="pure-u class">
+      <div id="badge"></div>
+      <nav id="nav">
+        <ul>
+          <li><a href="/" >home</a></li>
+          <li><a href="/projects" >projects</a></li>
+          <li><a href="/blog"  class="link-selected" >blog</a></li>
+        </ul>
+      </nav>
+      <div id="social-buttons">
+        <ul>
+          <li><a href="http://www.linkedin.com/pub/dong-hyun-choi/23/7a2/10a" target="_blank"><i class="icon-linkedin icon-2x"></i></a></li><!-- 28*32 -->
+          <li><a href="http://www.flickr.com/photos/100556466@N08/" target="_blank"><i class="icon-flickr icon-2x"></i></a></li><!-- 28*32 -->
+          <li><script><!--
+          document.write('<a href="mailto:' + 'andy.dh.choi' + '@' + 'gmail.com' + '">');
+          //--></script><i class="icon-envelope-alt icon-2x"></i></a></l1><!-- 32*32 -->
+        </ul>
+      </div>
+    </div>
+    <div class="pure-u-1">
+      <ul id="sidebar-toggle">
+        <i class="icon-angle-right icon-3x"></i>
+        <i class="icon-angle-left icon-3x"></i>
+      </ul>
+      <div id="content">
+        <div id="blog" class="page">
+	<h1>Blog</h1>
+	<article>
+		<ul class="icons-ul">
+			
+			<li>
+				<i class="icon-li icon-circle-blank"></i>
+				<div class="post-meta-data">
+					<span>17 Sep 2013</span>
+					<i class="icon-double-angle-right"></i>
+				</div>
+				<ul class="post-meta-data">
+					<li><a href="/blog/double-bitwise-trick-for-javascript">Double Bitwise Trick for JavaScript</a></li>
+					
+				</ul>
+			
+			<li>
+				<i class="icon-li icon-circle-blank"></i>
+				<div class="post-meta-data">
+					<span>16 Sep 2013</span>
+					<i class="icon-double-angle-right"></i>
+				</div>
+				<ul class="post-meta-data">
+					<li><a href="/blog/blog-opened">Blog Opened</a></li>
+					
+				</ul>
+			
+		</ul>
+	</article>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'dhchoi'; // required: replace example with your forum shortname
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  }());
+  </script>
+</body>
+</html>
