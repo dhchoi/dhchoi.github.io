@@ -67,6 +67,14 @@ body {
 #nav ul li {
 	margin: .8em 0;
 }
+.link-selected:after {
+	color: #fff;
+	content: "\f0a9";
+	float: right;
+	font-family: FontAwesome;
+	margin-left: .5em;
+	text-decoration: inherit;
+}
 #sidebar a {
 	display: block;
 	text-decoration: none;
@@ -75,22 +83,18 @@ body {
 #sidebar a:focus {
 	text-decoration: none;
 }
-#nav a {
+#sidebar a {
 	color: #f3f3f3;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	border-bottom: 2px solid #f3f3f3;
+	-moz-transition: all .25s ease-in;
+	-o-transition: all .25s ease-in;
+	-webkit-transition: all .25s ease-in;
+	transition: all .25s ease-in;
 }
-#nav a:hover {
-	border-bottom: 2px solid #7EA7D8;
-}
-.link-selected:after {
-	color: #fff;
-	content: "\f0a9";
-	float: right;
-	font-family: FontAwesome;
-	margin-left: .5em;
-	text-decoration: inherit;
+#sidebar a:hover {
+	border-color: #7EA7D8;
 }
 #social-buttons {
 	text-align: center;
@@ -109,16 +113,7 @@ body {
 #social-buttons a {
 	width: 42px;
 	height: 42px;
-	color: #f3f3f3;
 	text-align: center;
-	border-bottom: 2px solid #f3f3f3;
-	-moz-transition: all .1s ease-in;
-	-o-transition: all .1s ease-in;
-	-webkit-transition: all .1s ease-in;
-	transition: all .1s ease-in;
-}
-#social-buttons a:hover {
-	border-color: #7EA7D8;
 }
 #social-buttons i {
 	vertical-align: middle;
@@ -202,7 +197,7 @@ body {
 	text-transform: uppercase;
 }
 .page a {
-	background: #438CCA;
+	background: #3D85C5;
 	color: white;
 	display: inline-block;
 	line-height: 1.6em;
